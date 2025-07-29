@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вхід</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+
+
+    .image-section {
+      background: url('lighthouse.jpg') no-repeat 0% center;
+      background-size: cover;
+      position: relative;
+      width: 40%;
+    }
+
+    .logo-enter {
+      position: absolute;
+      top: 61px;
+      left: 60px;
+      width: 86px;
+      height: 69px;
+      background: url('logo1.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .image-text {
+      position: absolute;
+      bottom: 55px;
+      left: 55px;
+      color: white;
+      font-size: 36px;
+      line-height: 48px ;
+      font-weight: bold;
+      max-width: 500px;
+    }
+
+    .form-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      width: 60%;
+    }
+
+    .form-wrapper {
+      width: 100%;
+      max-width: 385px;
+    }
+
+    .enter-header {
+      margin-bottom: 33px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .enter-form label {
+      display: block;
+      margin-bottom: 11px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .enter-form input[type="text"], .enter-form input[type="password"] {
+      width: 100%;
+      padding: 20px 20px;
+      margin-bottom: 29px;
+      border: 1px solid #E1E1E1;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 16px;
+      background: #F8F8F8;
+    }
+
+    .enter-form .password-wrapper {
+      position: relative;
+    }
+
+    .enter-form .password-wrapper input {
+      padding-right: 40px;
+    }
+
+    .enter-form .toggle-password {
+      position: absolute;
+      top: 35%;
+      right: 18px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    .forgot-place{
+      display: flex;
+      align-items: center;;
+      justify-content: space-between;
+      /* margin-bottom: 30px; */
+
+    }
+    .forgot-password {
+      font-size: 16px;
+      color: #1B8AB8;
+      text-decoration: none;
+      margin-bottom: 10px;
+
+
+    }
+
+    .button-enter {
+      width: 100%;
+      padding: 20px;
+      font-size: 18px;
+      background-color: #e60000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+      @media (max-width: 1200px) {
+          .form-section, .image-section{
+            width: 50%;
+
+          }
+          .logo-enter{
+              left: 31px;   
+          }
+          .image-text {
+              bottom: 55px;
+              left: 31px;             
+              font-size: 31px;
+              line-height: 42px;
+          }
+    }
+
+    
+
+    @media (max-width: 920px) {
+      .image-section {
+        background: url(lighthouse.jpg) no-repeat 0% center;
+        background-size: cover;
+        min-height: 350px;
+        order: 1;
+        width: 100%;
+      }
+      .container {
+        flex-direction: column;
+      }
+      .form-section{
+        order: 2;
+        width: 100%;
+        padding: 53px 23px;
+      }
+      .image-text {
+        left: 25px;
+        bottom: 23px;
+        font-size: 26px;
+        line-height: 38px;
+      }
+      .enter-form input[type="text"], .enter-form input[type="password"] {
+        width: 100%;
+        padding: 13px 20px;
+        margin-bottom: 25px;
+      }
+      .forgot-password {
+        font-size: 13px;
+      }
+      .enter-form label {
+        margin-bottom: 8px;
+        font-size: 14px;
+           
+      }
+      .enter-form label {
+        margin-bottom: 8px;
+      }
+      .enter-header {
+        margin-bottom: 24px;
+        font-size: 30px;
+      }
+      .logo-enter {
+        top: 22px;
+        left: 24px;
+        width: 59px;
+        height: 48px;
+      }
+      .button-enter {
+        width: 100%;
+        padding: 15px;
+        font-size: 15px;
+      }
+    }
+    @media (max-width: 760px) {
+        .image-section {
+           min-height: 150px;
+           background: url(lighthouse2.jpg) no-repeat 0% bottom;
+           background-size: cover;
+        }
+              .image-text {
+        left: 25px;
+        bottom: 15px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <div class="form-wrapper">
+        <p class="enter-header">Вхід</p>
+        <form class="enter-form">
+          <div class="fields-wrap">
+
+          
+          <label for="phone">Номер телефону</label>
+          <input type="text" id="phone" name="phone" placeholder="098 765 43 21" required pattern="\d{3} \d{3} \d{2} \d{2}" />
+           <div class="forgot-place"> 
+             <label for="password">Пароль</label>
+             <a href="#" class="forgot-password">Забули пароль?</a>
+           </div>
+          <div class="password-wrapper">
+            <input type="password" id="password" name="password" required />
+            <img src="eye1.svg" alt="Toggle password" class="toggle-password" onclick="togglePassword()" style="cursor: pointer;"></img>
+          </div>
+          </div>
+
+          <button class="button-enter" type="submit">Увійти</button>
+        </form>
+      </div>
+    </div>
+    <div class="image-section">
+      <div class="logo-enter"></div>
+      <div class="image-text">
+        Ваш надійний партнер<br />у світі автомобільних товарів.
+      </div>
+    </div>
+  </div>
+
+  <script>
+function togglePassword() {
+  const passwordInput = document.getElementById('password');
+  const icon = document.querySelector('.toggle-password');
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    icon.src = 'eye2.svg'; // тут вставляєш шлях до PNG з «перекресленим» оком
+  } else {
+    passwordInput.type = 'password';
+    icon.src = 'eye1.svg'; // а тут — звичайне око
+  }
+}
+  </script>
+</body>
+</html>
