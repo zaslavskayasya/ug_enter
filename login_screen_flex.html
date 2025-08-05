@@ -88,8 +88,8 @@
       border-radius: 4px;
       font-family: inherit;
       font-size: 16px;
-      background: #F8F8F8;      
-      
+      background: #F8F8F8;  
+      font-size: 16px;            
     }
     .enter-form input[type="text"]:hover,
     .enter-form input[type="password"]:hover {
@@ -126,6 +126,7 @@
       display: flex;
       align-items: center;;
       justify-content: space-between;
+      margin-top: 20px;
       /* margin-bottom: 30px; */
 
     }
@@ -186,7 +187,7 @@
         order: 1;
         width: 100%;
       }
-      .container {
+      .container-enter {
         flex-direction: column;
       }
       .form-section{
@@ -255,7 +256,6 @@
         <p class="enter-header">Вхід</p>
         <form class="enter-form">
           <div class="fields-wrap">
-
           
           <label for="phone">Номер телефону</label>
           <input type="text" id="phone" name="phone" placeholder="098 765 43 21" required pattern="[\d\s()+-]*" />
@@ -267,6 +267,7 @@
             <input type="password" id="password" name="password" required />
             <img src="eye2.svg" alt="Toggle password" class="toggle-password" placeholder="* * * * * " onclick="togglePassword()" style="cursor: pointer;"></img>
           </div>
+
           </div>
 
           <button class="button-enter" type="submit">Увійти</button>
